@@ -882,11 +882,11 @@ Generated from portfolio website
             `.trim();
             
             // Create a blob and download
-            const blob = new Blob([resumeContent], { type: 'text/plain' });
+            const blob = new Blob([resumeContent], { type: 'pdf' });
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');
             a.href = url;
-            a.download = 'Helen_Doe_Resume.txt';
+            a.download = 'cv.pdf';
             document.body.appendChild(a);
             a.click();
             window.URL.revokeObjectURL(url);
